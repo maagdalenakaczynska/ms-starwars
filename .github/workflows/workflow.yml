@@ -47,3 +47,16 @@ jobs:
           name: mocha Tests unit
           path: ./test-results.json
           reporter: mocha-json
+      - name: Depcheck
+        uses: dependency-check/Dependency-Check_Action@main
+        id: Depcheck
+        with:
+          project: 'ms-starwars'
+          path: '.'
+          format: 'HTML'
+          others: ''
+      - name: Upload Test results
+        uses: actions/upload-artifact@master
+        with:
+          name: Depcheck report
+          path: ${{github.workspace}}/reports
