@@ -83,3 +83,9 @@ jobs:
           registry: magdakaczynska.jfrog.io
           username: ${{ secrets.JFROG_LOGIN }}
           password: ${{ secrets.JFROG_HASLO }}
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: magdakaczynska.jfrog.io/default-docker-local/test:latest
