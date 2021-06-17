@@ -80,6 +80,6 @@ jobs:
       - name: Login to JFrog
         uses: docker/login-action@v1
         with:
-          registry: <magdakaczynska>.jfrog.io
-          username: ${{ secrets.JFROG_s23675@pjwstk.edu.pl }}
-          password: ${{ secrets.JFROG_Magda1234! }}
+          registry: magdakaczynska.jfrog.io
+          username: ${{ secrets.JFROG_LOGIN }}
+          password: ${{ secrets.JFROG_HASLO }}
