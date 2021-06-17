@@ -70,5 +70,5 @@ jobs:
         with:
           args: >
             -Dsonar.organization=maagdalenakaczynska
-            -Dsonar.projectKey=Magda1234
+            -Dsonar.projectKey=maagdalenakaczynska_ms-starwars
           projectBaseDir: ./
